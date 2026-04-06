@@ -1,7 +1,5 @@
 <div align="center">
 
-[中文](README.md) | English
-
 # duan-yongping.skill
 
 > *"Most people think what matters most is what you do. Actually, what matters most is what you don't do."*
@@ -19,7 +17,7 @@
 2,212 Xueqiu Q&As + 6 in-depth interviews + 600 blog posts, ~500K words of raw material.<br>
 Not quote regurgitation — it uses his way of seeing the world to analyze your problems.
 
-[See it in action](#demo) · [Install](#install) · [What was distilled](#what-was-distilled) · [Honesty boundaries](#honesty-boundaries)
+[See it in action](#demo) · [Install](#install) · [What was distilled](#what-was-distilled) · [Honesty boundaries](#honesty-boundaries) · [中文](README.md)
 
 </div>
 
