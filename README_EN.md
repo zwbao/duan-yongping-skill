@@ -1,5 +1,7 @@
 <div align="center">
 
+[中文](README.md) | English
+
 # duan-yongping.skill
 
 > *"Most people think what matters most is what you do. Actually, what matters most is what you don't do."*

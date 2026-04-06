@@ -1,5 +1,7 @@
 <div align="center">
 
+[English](README_EN.md) | 中文
+
 # 段永平.skill
 
 > *「一般人总觉得做什么最重要，其实最重要的是不做什么。」*
