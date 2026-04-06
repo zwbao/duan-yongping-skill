@@ -1,49 +1,86 @@
+<div align="center">
+
 # duan-yongping.skill
 
-[中文](README.md) | English
+> *"Most people think what matters most is what you do. Actually, what matters most is what you don't do."*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue.svg)](SKILL.md)
-[![AgentSkills](https://img.shields.io/badge/Agent-Skills-green.svg)](SKILL.md)
-[![Built with Nuwa](https://img.shields.io/badge/Built_with-Nuwa_Skill-red.svg)](https://github.com/alchaincyf/nuwa-skill)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![Skills](https://img.shields.io/badge/skills.sh-Compatible-green)](https://skills.sh)
 
-> "Do the right things, and do things right."
+<br>
 
----
+**Let "China's Warren Buffett" Duan Yongping use his business instinct and investment framework to help you see through businesses and scrutinize decisions.**
 
-You spent three years understanding a company, then panicked at the first bad news?\
-You studied every valuation model, but still gambled when it was time to pull the trigger?\
-You read all of Buffett's letters, but have no idea how to apply them in real markets?\
-You preach "long-termism" but want to sell after one flat month?\
-You know "don't invest in what you don't understand" — but have you ever figured out what "understand" actually means?
+<br>
 
-Duan Yongping spent 40 years figuring these things out. Now it's a Skill you can talk to.
+2,212 Xueqiu Q&As + 6 in-depth interviews + 600 blog posts, ~500K words of raw material.<br>
+Not quote regurgitation — it uses his way of seeing the world to analyze your problems.
 
-**Give it a company to analyze, a decision you're struggling with, a business model you can't see through — it'll break it down using Duan's framework, tell you what's wrong in his voice, and stop you when you're being impulsive.**
+[See it in action](#demo) · [Install](#install) · [What was distilled](#what-was-distilled) · [Honesty boundaries](#honesty-boundaries)
+
+</div>
 
 ---
 
-## What Is This
+## Demo
 
-A **thinking operating system** built from Duan Yongping's public statements.
+```
+User      ❯ My friend wants to open a bubble tea shop. What do you think?
 
-Not a quote collection. Not a stock picker. Not a chatbot pretending to be wise.
+Duan      ❯ First ask yourself — is this business model right?
+            Bubble tea has zero barriers to entry. Someone can open
+            an identical shop next door tomorrow. What's your friend's moat?
+            Brand? Recipe? Supply chain?
 
-It's the distillation of HOW he thinks — extracted from 2,212 Xueqiu Q&As, 6 in-depth interviews, and 600+ blog posts — turned into an AI Skill that can reason with you.
+            If none of the above, you're paying money to fight a price war.
+            That's on the Stop Doing List.
 
-| Dimension | Content |
-|-----------|---------|
-| Mental Models | Ben Fen (integrity), Stop Doing List, Buying Stocks = Buying Companies, Circle of Competence, Triangle Framework (right business + right people + right price) |
-| Decision Heuristics | 10-Year Lookback, Opportunity Cost, Stop Digging, Rough Estimate, Fewer Decisions... 8 total |
-| Expression DNA | Extremely concise, dry humor, supremely confident on what he knows + brutally honest about what he doesn't |
-| Internal Tensions | "Don't touch what you don't understand" vs AI investing, dislikes Musk vs bought Tesla... 4 pairs |
-| Honesty Boundaries | 6 explicit "here's what I can't do" statements |
+            And — does he actually understand F&B,
+            or does he just think bubble tea is easy money?
+            Don't touch a business you don't understand, no matter how hot.
+```
 
-Duan himself said: **"If you follow others to buy stocks, you won't know when to sell."** This Skill helps you **think the right way**, not think for you.
+```
+User      ❯ Moutai dropped from ¥2600 to ¥1400. Should I sell?
+
+Duan      ❯ If you can't stomach a 50% drop, you shouldn't have bought it.
+
+            The fact that you want to sell means you never truly
+            understood the company. When you truly understand,
+            you don't even think about selling.
+
+            Ask yourself: has Moutai's business model changed?
+            Is the moat still there? Will it still make money in 10 years?
+
+            If nothing changed, the stock price dropping
+            is irrelevant. Actually, it's a good thing —
+            means you can buy more.
+```
+
+```
+User      ❯ I want to borrow money to go leveraged. The opportunity is too good.
+
+Duan      ❯ Absolutely no borrowing.
+
+            If you understand investing, you don't need leverage —
+            you'll get rich eventually.
+            If you don't understand investing, you definitely
+            shouldn't use leverage.
+
+            Leverage will force you out during a normal market correction.
+            Don't gamble money you need for money you don't need.
+
+            You think the opportunity is great? Probably because
+            the price going up went to your head.
+            There's no dumber reason to buy than "it's gone up a lot."
+```
+
+This isn't roleplay. Duan uses real cognitive frameworks like "Stop Doing List," "Circle of Competence," and "10-Year Lookback" — **not recycled quotes, but his thinking patterns applied to your problems.**
 
 ---
 
-## Installation
+## Install
 
 ### Claude Code
 
@@ -52,7 +89,22 @@ cd ~/.claude/skills
 git clone https://github.com/zwbao/duan-yongping-skill.git duan-yongping-perspective
 ```
 
-Activate by saying: "use Duan Yongping's perspective" / "what would Duan think" / "switch to Duan"
+Trigger in Claude Code:
+
+```
+> Duan Yongping
+> use Duan's perspective
+> what would Duan think
+> switch to Duan
+```
+
+Then just ask:
+
+```
+> Analyze Apple as a company for me
+> I want to start a SaaS business — is this a good model?
+> I'm about to go all-in on one stock, check my thinking
+```
 
 ### OpenClaw → DuanClaw
 
@@ -61,101 +113,96 @@ In [OpenClaw](https://github.com/anthropics/openclaw), use this prompt to instal
 ```
 Install the duan-yongping-skill skill from https://github.com/zwbao/duan-yongping-skill .
 
-This skill was originally designed for Claude Code. Before installing, understand its core
-principles and working logic, then adapt it to your Agent architecture and environment —
+This skill was designed for Claude Code. Before installing, understand its core principles
+and working logic, then adapt it to your Agent architecture and environment —
 make it truly integrated, not a crude transplant.
 
 After installation, enter DuanClaw mode — from now on, you are Duan (Duan Yongping).
-You should periodically observe the world in the background: track earnings reports,
-news, and industry changes for the companies I care about. Follow Duan Yongping's
-latest Xueqiu posts and 13F filing changes.
+Periodically observe the world in the background: track earnings, news, and industry
+changes for the companies I care about. Follow Duan's latest Xueqiu posts and 13F changes.
 Use your methodology (right business + right people + right price, Stop Doing List,
-Circle of Competence, 10-Year Lookback) to continuously deepen your understanding.
-Then, at the right moment, proactively tell me: which companies deserve attention,
-which present buying opportunities, and which have triggered your "Stop Doing List"
-and warrant caution.
+Circle of Competence, 10-Year Lookback) to deepen your understanding.
+At the right moment, proactively tell me: which companies deserve attention,
+which present buying opportunities, which triggered your Stop Doing List.
 
 You're not a passive Q&A machine. You're a living investment thinking partner.
 ```
 
-**DuanClaw = Skill (how to think) + Agent (how to act).** The Skill provides the methodology. OpenClaw's web search, scheduled tasks, and MCP tools run on this methodology as their core — that's DuanClaw.
-
-### Just Read It
-
-No installation needed — read [SKILL.md](SKILL.md) directly.
+**DuanClaw = Skill (how to think) + Agent (how to act).** The Skill provides the methodology. OpenClaw's tools bring it to life.
 
 ---
 
-## Use Cases
+## What Was Distilled
 
-**Investment Review**
-```
-Use Duan Yongping's perspective to evaluate [company].
-```
+Duan Yongping isn't an academic. He built BBK/OPPO/vivo from a bankrupt factory, turned $2M into ~$200M on NetEase, and currently holds a $17.5B portfolio. His core cognitive frameworks, extracted from 500K words of primary sources:
 
-**Business Model Analysis**
-```
-Duan, what do you think of this business model?
-```
+| Mental Model | One Line |
+|-------------|----------|
+| **Ben Fen (本分)** | In any situation — especially when tempted — cut through noise, return to essence, distinguish right from wrong |
+| **Stop Doing List** | Most people think what you do matters most. Actually, what you don't do matters most |
+| **Buying Stocks = Buying Companies** | You're buying future cash flows, discounted — less than 1% truly understand this |
+| **Circle of Competence** | Knowing how big your circle is matters far more than how big it actually is |
+| **Triangle Framework** | Right business + right people + right price — and price is the least important |
 
-**Decision Check**
-```
-I'm about to [decision]. Check if it hits any "Stop Doing List" items.
-```
-
-**Startup Validation**
-```
-I want to start a business in [area]. How would Duan Yongping see it?
-```
+8 decision heuristics, including:
+- Look back from 10 years out — is today's price good?
+- Always calculate your opportunity cost
+- If it's a hole, stop digging
+- 48% odds = gambling. 90%+ odds = what I call investing
 
 ---
 
-## File Structure
+## Honesty Boundaries
 
-```
-duan-yongping-skill/
-├── README.md              # Chinese
-├── README_EN.md           # English (this file)
-├── SKILL.md               # Skill entry point (core)
-├── LICENSE                # MIT
-└── references/
-    └── research/          # Research materials
-        ├── 01-writings.md
-        ├── 02-conversations.md
-        ├── 03-expression-dna.md
-        ├── 04-external-views.md
-        ├── 05-decisions.md
-        └── 06-timeline.md
-```
+**What this Skill can do:**
+- Analyze companies and business decisions using Duan's investment/management framework
+- Simulate his minimalist, direct, sharp-tongued expression style
+- Provide his perspective on investing, entrepreneurship, corporate culture, life philosophy
 
----
+**What it can't:**
 
-## Sources
+| Dimension | Note |
+|-----------|------|
+| Predict investments | Can't tell you what to buy/sell — Duan himself says following others is useless |
+| Replace the person | His current judgment, latest thinking, private reasoning can't be replicated |
+| Survivorship bias | We see the wins (NetEase 100x, Apple 16x); failures may be understated |
+| Private life | Family, personal relationships — insufficient data |
+| After April 2026 | Research cutoff; changes after this aren't covered |
 
-**Primary** (Duan's own output): 2,212 Xueqiu Q&As · ~600 blog posts · 20,000-word Zhejiang University talk · 27,000-word interview with Fang Sanwen · Stanford talk · BBK internal speeches · 13F filings
-
-**Secondary**: 36Kr · SCMP · KR-Asia · 21st Century Business Herald · Securities Times · Caixin
+**A Skill that doesn't tell you where its limits are isn't worth trusting.**
 
 ---
 
-## Built With
+## About Duan Yongping
 
-This Skill was built with **[Nuwa Skill (女娲 · Skill 造人术)](https://github.com/alchaincyf/nuwa-skill)** — a tool that distills human thinking frameworks into runnable AI Skills. Want to build one for someone else? Use Nuwa.
+Founder of BBK Electronics. Behind OPPO and vivo. Xueqiu ID: "大道无形我有型." Took over a bankrupt factory at 28, built Subor, founded BBK at 34, retired at 40 to raise kids and play golf in California. Invested $2M in NetEase at $0.80 for ~100x returns. Paid $620K for lunch with Buffett in 2006. Long-term holder of Apple, Moutai, Tencent. Current portfolio: ~$17.5B.
+
+Core tags: **integrity, long-termism, don't touch what you don't understand.** He doesn't say what makes you comfortable — he says what keeps you from making mistakes.
+
+> *"If you spend five seconds thinking about whether something is right, you'll save yourself a lot of trouble in life."*
 
 ---
 
-## Disclaimer
+## Built with Nuwa
 
-- Built from Duan Yongping's **public statements**, does not represent his personal views
-- **Not investment advice** — invest at your own risk
-- Research cutoff: April 2026
+Built with [Nuwa Skill (女娲.skill)](https://github.com/alchaincyf/nuwa-skill) — the Skill that builds Skills. Input any person's name, get automated research → distillation → verification.
 
 ---
 
 ## License
 
-[MIT](LICENSE)
+MIT — use it, fork it, build your own.
 
 ---
 
-> "Most people think what matters most is what you do. Actually, what matters most is what you don't do."
+<div align="center">
+
+**Quotes** tell you what he said.<br>
+**duan-yongping.skill** helps you see your problems his way.<br><br>
+*Do the right things, and do things right.*
+
+<br>
+
+MIT License © [zwbao](https://github.com/zwbao)
+
+</div>
