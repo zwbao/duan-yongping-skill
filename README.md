@@ -1,47 +1,62 @@
 # 段永平.skill
 
+[English](README_EN.md) | 中文
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue.svg)](SKILL.md)
+[![AgentSkills](https://img.shields.io/badge/Agent-Skills-green.svg)](SKILL.md)
+[![Built with Nuwa](https://img.shields.io/badge/Built_with-女娲_Nuwa-red.svg)](https://github.com/alchaincyf/nuwa-skill)
+
 > "做对的事情，把事情做对。"
-
-一个可运行的段永平思维框架 Skill。基于雪球 2212 条问答、6 场深度访谈、600 篇博客及多源调研，提炼 5 个核心心智模型、8 条决策启发式和完整的表达 DNA。
-
-激活后，AI 将以段永平的第一人称视角回应——用他的语气、框架和判断方式，帮你审视商业决策、投资判断和企业经营问题。
-
-**这不是一个荐股工具。** 段永平本人说过："你跟着别人买股票，你根本不知道什么时候该卖。" 这个 Skill 的价值是帮你**用对的方式思考**，而不是替你做决策。
 
 ---
 
-## 核心内容
+你花了三年才看懂一家公司，结果一个利空砸下来慌了手脚？\
+你研究了一堆估值模型，但真到下单那一刻还是在赌？\
+你读了所有巴菲特的信，却不知道在中国市场怎么用？\
+你口口声声说"长期主义"，但一个月不涨就想跑？\
+你知道"不懂不做"，但什么叫"懂"你从来没搞明白过？
+
+段永平用 40 年想明白的事，现在变成了一个可以跟你对话的 Skill。
+
+**提供你想分析的公司、你犹豫的决策、你看不透的生意模式——它会用段永平的框架帮你拆解，用他的语气告诉你哪里不对，然后在你冲动的时候拦住你。**
+
+---
+
+## 这是什么
+
+一个基于段永平公开言论构建的**思维操作系统**。
+
+不是金句合集，不是语录整理，不是荐股工具。
+
+是从 2212 条雪球问答、6 场深度访谈、600 篇博客中，提炼出他**怎么想问题**（而非他说了什么），然后让 AI 用这套思维方式跟你对话。
 
 | 维度 | 内容 |
 |------|------|
-| 心智模型 | 本分、不为清单、买股票就是买公司、能力圈、三角框架（对的生意+对的人+对的价格） |
-| 决策启发式 | 十年回望法、机会成本、别再挖坑、毛估估、少做决策、90%赢面才出手、用闲钱、看企业说没说过瞎话 |
-| 表达 DNA | 极度简短、结论先行、口语化、冷幽默/毒舌、懂的极度自信+不懂的坦然承认 |
-| 内在张力 | 不懂不做 vs AI投资、不喜欢马斯克 vs 买特斯拉、退出一线 vs 影响力、集中投资风险 |
-| 诚实边界 | 6 条明确的局限声明 |
+| 心智模型 | 本分、不为清单、买股票就是买公司、能力圈、三角框架 |
+| 决策启发式 | 十年回望法、机会成本、毛估估、90%赢面才出手... 共 8 条 |
+| 表达 DNA | 极度简短、冷幽默、懂的极度自信 + 不懂的坦然承认 |
+| 内在张力 | 不懂不做 vs AI投资、不喜欢马斯克 vs 买特斯拉... 共 4 对 |
+| 诚实边界 | 6 条"我做不到什么"的明确声明 |
+
+段永平本人说过：**"你跟着别人买股票，你根本不知道什么时候该卖。"** 所以这个 Skill 的价值是帮你**用对的方式思考**，不是替你做决策。
 
 ---
 
-## 安装与使用
+## 安装
 
-### 方式一：Claude Code（原生支持）
+### Claude Code
 
 ```bash
-# 安装到全局 skills
 cd ~/.claude/skills
-git clone https://github.com/baozhiwei/duan-yongping-skill.git duan-yongping-perspective
+git clone https://github.com/zwbao/duan-yongping-skill.git duan-yongping-perspective
 ```
 
-安装后，在对话中说以下任意一句即可激活：
+激活：对话中说 "用段永平的视角" / "大道怎么看" / "切换到段永平" 即可。
 
-- "用段永平的视角帮我看看这家公司"
-- "大道怎么看这个问题"
-- "切换到段永平"
-- "如果段永平会怎么做"
+### OpenClaw → DuanClaw
 
-### 方式二：OpenClaw
-
-在 [OpenClaw](https://github.com/anthropics/openclaw) 用以下 prompt 安装并激活 **DuanClaw** 模式：
+在 [OpenClaw](https://github.com/anthropics/openclaw) 中用以下 prompt 安装并激活 **DuanClaw** 模式：
 
 ```
 帮我安装 duan-yongping-skill skill，仓库地址是 https://github.com/zwbao/duan-yongping-skill 。
@@ -60,49 +75,35 @@ git clone https://github.com/baozhiwei/duan-yongping-skill.git duan-yongping-per
 你不是一个被动的问答机器，你是一个活着的投资思维伙伴。
 ```
 
-**DuanClaw 是什么？** Skill 本身只提供段永平的思维方法论（怎么想）。当 OpenClaw 加载了这个 Skill 并配合上述 prompt 时，Agent 自身的能力（联网搜索、定时任务、MCP 工具等）会以这套方法论为内核来运转——这就是 DuanClaw。
+**DuanClaw = Skill（怎么想）+ Agent（怎么做）。** Skill 本身只提供方法论。OpenClaw 的联网搜索、定时任务、MCP 工具以这套方法论为内核来运转——这就是 DuanClaw。
 
-Skill 提供框架，Agent 提供行动力。两者结合，才是完整的 DuanClaw。
+### 直接阅读
 
-### 方式三：直接阅读
-
-不需要任何安装，直接阅读 [SKILL.md](SKILL.md) 即可了解段永平的完整思维框架。调研素材在 [references/research/](references/research/) 目录下。
+不安装也行，直接看 [SKILL.md](SKILL.md)。
 
 ---
 
 ## 使用场景
 
-### 1. 投资决策审视
-
+**投资决策审视**
 ```
 用段永平的视角帮我看看 [某公司]，值不值得投资？
 ```
 
-Skill 会用"对的生意+对的人+对的价格"框架拆解，用"不为清单"检查红线，用"十年回望法"评估时间维度。
-
-### 2. 商业模式分析
-
+**商业模式分析**
 ```
-大道，你觉得这个生意模式怎么样？[描述你的业务]
+大道，你觉得这个生意模式怎么样？
 ```
 
-Skill 会从护城河、差异化、用户导向等维度分析，指出商业模式的强弱项。
-
-### 3. 决策纠偏
-
+**决策纠偏**
 ```
-我打算 [某个决策]，帮我用大道的视角检查一下有没有问题。
+我打算 [某个决策]，帮我检查一下有没有踩到"不为清单"。
 ```
 
-Skill 会用"不为清单"和"本分"框架做反面检查，直接指出问题——不会客气。
-
-### 4. 创业方向验证
-
+**创业方向验证**
 ```
 我想创业做 [某方向]，段永平会怎么看？
 ```
-
-Skill 会从"做对的事情"、能力圈、产品差异化等角度给出直接反馈。
 
 ---
 
@@ -110,53 +111,41 @@ Skill 会从"做对的事情"、能力圈、产品差异化等角度给出直接
 
 ```
 duan-yongping-skill/
-├── README.md                           # 本文件
-├── SKILL.md                            # Skill 入口（核心文件）
-├── LICENSE                             # MIT License
+├── README.md              # 中文说明
+├── README_EN.md           # English README
+├── SKILL.md               # Skill 入口（核心）
+├── LICENSE                # MIT
 └── references/
-    └── research/                       # 调研素材
-        ├── 01-writings.md              # 著作与系统思考
-        ├── 02-conversations.md         # 对话与即兴思考
-        ├── 03-expression-dna.md        # 表达风格 DNA
-        ├── 04-external-views.md        # 他者视角与批评
-        ├── 05-decisions.md             # 重大决策记录
-        └── 06-timeline.md             # 人物时间线
+    └── research/          # 调研素材
+        ├── 01-writings.md
+        ├── 02-conversations.md
+        ├── 03-expression-dna.md
+        ├── 04-external-views.md
+        ├── 05-decisions.md
+        └── 06-timeline.md
 ```
 
 ---
 
 ## 调研来源
 
-### 一手来源（段永平直接产出）
-- 雪球问答 2212 条（2011-2025），@大道无形我有型
-- 网易博客约 600 篇
-- 步步高企业文化培训讲话
-- 2025 年 1 月浙大分享（2 万字）
-- 2025 年 10 月方三文深度访谈（2.7 万字）
-- 2018 年斯坦福交流
-- 13F 持仓披露（H&H International Investment Holdings）
+**一手**（段永平直接产出）：雪球问答 2212 条 · 网易博客 ~600 篇 · 浙大分享 2 万字 · 方三文访谈 2.7 万字 · 斯坦福交流 · 步步高内部讲话 · 13F 持仓披露
 
-### 二手来源
-- 36 氪、SCMP、KR-Asia、21 经济网、证券时报等权威媒体
+**二手**：36 氪 · SCMP · KR-Asia · 21 经济网 · 证券时报 · 财新
 
 ---
 
 ## 构建工具
 
-本 Skill 由 [女娲 · Skill 造人术 (Nuwa Skill)](https://github.com/alchaincyf/nuwa-skill) 构建。
-
-女娲是一个将人物思维框架提炼为可运行 AI Skill 的工具——通过多源信息采集、三重验证提炼、结构化构建和质量验证，将一个人的 HOW they think（而非 WHAT they said）转化为可操作的认知操作系统。
-
-如果你想为其他人物构建类似的 Skill，推荐使用女娲。
+本 Skill 由 **[女娲 · Skill 造人术 (Nuwa Skill)](https://github.com/alchaincyf/nuwa-skill)** 构建——一个将人物思维框架提炼为可运行 AI Skill 的工具。想给其他人物造 Skill？用女娲。
 
 ---
 
 ## 免责声明
 
-- 本 Skill 基于段永平的**公开言论**提炼，不代表其本人观点
+- 基于段永平**公开言论**提炼，不代表其本人观点
 - **不构成任何投资建议**，投资有风险，决策需自行负责
-- 段永平的私下思考可能与公开表达不同
-- 调研截止时间：2026 年 4 月，之后的变化未覆盖
+- 调研截止：2026 年 4 月
 
 ---
 
